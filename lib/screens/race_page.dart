@@ -566,11 +566,11 @@ class _RacePageState extends State<RacePage> {
                                             width: double.infinity,
                                             height: 50,
                                             child: RaisedButton(
-                                              color: Colors.blue.shade900,
+                                              color: Colors.indigoAccent,
                                               shape: RoundedRectangleBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          20)),
+                                                borderRadius:
+                                                    BorderRadius.circular(20),
+                                              ),
                                               child: const Text(
                                                 'Finalizar',
                                                 style: TextStyle(
@@ -629,6 +629,19 @@ class _RacePageState extends State<RacePage> {
         _radioValue6 == -1 ||
         _radioValue7 == -1 ||
         _radioValue8 == -1) {
+      AlertDialog(
+        title: Text('Alerta'),
+        content: Text("Debe seleccionar todos los campos"),
+        actions: <Widget>[
+          FlatButton(
+            child: Text("Aceptar"),
+            textColor: Colors.blue,
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+          )
+        ],
+      );
     } else {
       if (_radioValue1 == 0) {
         fin1 = "${formattedDate}, ${gat1}, ${resul} ";

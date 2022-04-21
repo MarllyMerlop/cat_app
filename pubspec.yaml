@@ -13,9 +13,8 @@ dependencies:
     sdk: flutter
   get: ^4.3.8
   intl: ^0.17.0
-  path_provider: ^2.0.9
-  screenshot: ^1.2.3
   native_screenshot: ^1.0.0
+
 
   cupertino_icons: ^1.0.2
 
