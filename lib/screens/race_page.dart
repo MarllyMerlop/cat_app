@@ -1,9 +1,11 @@
-// ignore_for_file: deprecated_member_use, unnecessary_null_comparison
+// ignore_for_file: deprecated_member_use, unnecessary_null_comparison, unnecessary_statements, unnecessary_brace_in_string_interps
 
+import 'package:cat_app/screens/save_race.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class RacePage extends StatefulWidget {
-  const RacePage({Key? key}) : super(key: key);
+  RacePage({Key? key}) : super(key: key);
 
   @override
   _RacePageState createState() => _RacePageState();
@@ -19,6 +21,15 @@ class _RacePageState extends State<RacePage> {
   int _radioValue6 = -1;
   int _radioValue7 = -1;
   int _radioValue8 = -1;
+
+  String gat1 = 'Gato Maine Coon';
+  String gat2 = 'Gato Bosque de Noruega';
+  String gat3 = 'Gato Ragdoll';
+  String gat4 = 'Gato British Shorthair';
+  String gat5 = 'Gato Angora Turco';
+  String gat6 = 'Gato Himalayo';
+  String gat7 = 'Gato Nebelung';
+  String gat8 = 'Gato Curl Americano';
 
   void _handleRadioValueChange1(int? value) {
     setState(() {
@@ -95,8 +106,8 @@ class _RacePageState extends State<RacePage> {
               const Padding(
                 padding: EdgeInsets.all(8.0),
               ),
-              const Text(
-                'Gato Maine Coon\n',
+              Text(
+                '$gat1 \n',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20.0,
@@ -151,8 +162,8 @@ class _RacePageState extends State<RacePage> {
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  const Text(
-                    'Gato Bosque de Noruega\n',
+                  Text(
+                    '$gat2 \n',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20.0,
@@ -207,8 +218,8 @@ class _RacePageState extends State<RacePage> {
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      const Text(
-                        'Gato Ragdoll \n',
+                      Text(
+                        '$gat3 \n',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 20.0,
@@ -263,8 +274,8 @@ class _RacePageState extends State<RacePage> {
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          const Text(
-                            'Gato British Shorthair \n',
+                          Text(
+                            '$gat4 \n',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 20.0,
@@ -319,8 +330,8 @@ class _RacePageState extends State<RacePage> {
                           Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
-                              const Text(
-                                'Gato Angora Turco \n',
+                              Text(
+                                '$gat5 \n',
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 20.0,
@@ -375,8 +386,8 @@ class _RacePageState extends State<RacePage> {
                               Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
-                                  const Text(
-                                    'Gato Himalayo \n',
+                                  Text(
+                                    '$gat6 \n',
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 20.0,
@@ -433,8 +444,8 @@ class _RacePageState extends State<RacePage> {
                                   Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: <Widget>[
-                                      const Text(
-                                        'Gato Nebelung \n',
+                                      Text(
+                                        '$gat7 \n',
                                         style: TextStyle(
                                           fontWeight: FontWeight.bold,
                                           fontSize: 20.0,
@@ -493,8 +504,8 @@ class _RacePageState extends State<RacePage> {
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: <Widget>[
-                                          const Text(
-                                            'Gato Curl Americano \n',
+                                          Text(
+                                            '$gat8 \n',
                                             style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 20.0,
@@ -595,6 +606,20 @@ class _RacePageState extends State<RacePage> {
     );
   }
 
+  var resul = 'Me gusta';
+  var resultad = 'No me gusta';
+  var fin1;
+  var fin2;
+  var fin3;
+  var fin4;
+  var fin5;
+  var fin6;
+  var fin7;
+  var fin8;
+
+  String formattedDate =
+      DateFormat('kk:mm – dd/MM/yyyy').format(DateTime.now());
+
   void validarFormulario() {
     if (_radioValue1 == -1 ||
         _radioValue2 == -1 ||
@@ -605,12 +630,78 @@ class _RacePageState extends State<RacePage> {
         _radioValue7 == -1 ||
         _radioValue8 == -1) {
     } else {
-      // Navigator.push(
-      //   context,
-      //   MaterialPageRoute(
-      //     builder: (context) => (),
-      //   ),
-      // );
+      if (_radioValue1 == 0) {
+        fin1 = "${formattedDate}, ${gat1}, ${resul} ";
+        print("${fin1}");
+      } else {
+        fin1 = "${formattedDate}, ${gat1}, ${resultad} ";
+        print("${fin1}");
+      }
+      if (_radioValue2 == 0) {
+        fin2 = "${formattedDate}, ${gat2}, ${resul} ";
+        print("${fin2}");
+      } else {
+        fin2 = "${formattedDate}, ${gat2}, ${resultad} ";
+        print("${fin2}");
+      }
+      if (_radioValue3 == 0) {
+        fin3 = "${formattedDate}, ${gat3}, ${resul} ";
+        print("${fin3}");
+      } else {
+        fin3 = "${formattedDate}, ${gat3}, ${resultad} ";
+        print("${fin3}");
+      }
+      if (_radioValue4 == 0) {
+        fin4 = "${formattedDate}, ${gat4}, ${resul} ";
+        print("${fin4}");
+      } else {
+        fin4 = "${formattedDate}, ${gat4}, ${resultad} ";
+        print("${fin4}");
+      }
+      if (_radioValue5 == 0) {
+        fin5 = "${formattedDate}, ${gat5}, ${resul} ";
+        print("${fin5}");
+      } else {
+        fin5 = "${formattedDate}, ${gat5}, ${resultad} ";
+        print("${fin5}");
+      }
+      if (_radioValue6 == 0) {
+        fin6 = "${formattedDate}, ${gat6}, ${resul} ";
+        print("${fin6}");
+      } else {
+        fin6 = "${formattedDate}, ${gat6}, ${resultad} ";
+        print("${fin6}");
+      }
+      if (_radioValue7 == 0) {
+        fin7 = "${formattedDate}, ${gat7}, ${resul} ";
+        print("${fin7}");
+      } else {
+        fin7 = "${formattedDate}, ${gat7}, ${resultad} ";
+        print("${fin7}");
+      }
+      if (_radioValue8 == 0) {
+        fin8 = "${formattedDate}, ${gat8}, ${resul} ";
+        print("${fin8}");
+      } else {
+        fin8 = "${formattedDate}, ${gat8}, ${resultad} ";
+        print("${fin8}");
+      }
+
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => SaveRace(
+            find1: fin1,
+            find2: fin2,
+            find3: fin3,
+            find4: fin4,
+            find5: fin5,
+            find6: fin6,
+            find7: fin7,
+            find8: fin8,
+          ),
+        ),
+      );
     }
   }
 }
