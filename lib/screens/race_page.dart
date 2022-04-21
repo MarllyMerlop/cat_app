@@ -104,7 +104,18 @@ class _RacePageState extends State<RacePage> {
             children: <Widget>[
               const Divider(color: Colors.blue),
               const Padding(
-                padding: EdgeInsets.all(8.0),
+                padding: EdgeInsets.all(3.0),
+              ),
+              const Text(
+                ' Todos los campos obligatorios *',
+                style: TextStyle(
+                    fontSize: 23.0,
+                    color: Colors.red,
+                    fontWeight: FontWeight.bold),
+              ),
+              const Divider(
+                height: 17.0,
+                color: Colors.blue,
               ),
               Text(
                 '$gat1 \n',
@@ -629,19 +640,6 @@ class _RacePageState extends State<RacePage> {
         _radioValue6 == -1 ||
         _radioValue7 == -1 ||
         _radioValue8 == -1) {
-      AlertDialog(
-        title: Text('Alerta'),
-        content: Text("Debe seleccionar todos los campos"),
-        actions: <Widget>[
-          FlatButton(
-            child: Text("Aceptar"),
-            textColor: Colors.blue,
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-          )
-        ],
-      );
     } else {
       if (_radioValue1 == 0) {
         fin1 = "${formattedDate}, ${gat1}, ${resul} ";
